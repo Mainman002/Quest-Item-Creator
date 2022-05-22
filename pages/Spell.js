@@ -1,3 +1,5 @@
+import {Images} from "./resources.js";
+const img = new Images();
 
 const ctx = canvas.getContext("2d");
 const copyBtn = document.getElementById("copyBtn");
@@ -52,11 +54,7 @@ class Main {
       this.ctx = canvas.getContext('2d')
       this.window_size = { w: 40, h: 40 }
       
-      this.images = {
-        'EQUIPMENT/AMMO/1': Loader_Image('../src/items/EQUIPMENT/AMMO/1/0_0_0.png'),
-        'EQUIPMENT/BOWS/3': Loader_Image('../src/items/EQUIPMENT/BOWS/3/0_0_0.png'),
-        'EQUIPMENT/MACE/EMERALD/2': Loader_Image('../src/items/EQUIPMENT/MACE/EMERALD/2/0_0_0.png'),
-      }
+      this.images = img.dict;
     }
 
     update(dt) {
