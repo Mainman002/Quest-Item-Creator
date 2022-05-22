@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="pages/style.css">
+</head>
+<body>
+    <script>
+        function showType(typeName) {
+            var i;
+            var x = document.getElementsByClassName("type");
+            for (i = 0; i < x.length; i++) {
+              x[i].style.display = "none";
+            }
+            document.getElementById(typeName).style.display = "flex";
+          }
+    </script>
+
+<header id="header">
+    <div id="row_left" class="type_bar">
+        <a id="btn" href="pages/Effect.html">Effect</a>
+        <a id="btn" href="pages/Spell.html">Spell</a>
+        <a id="btn" href="pages/Item.html">Item</a>
+        <a id="btn" href="pages/Ammo.html">Ammo</a>
+        <a id="btn" href="pages/Weapon.html">Weapon</a>
+    </div>
+</header>
+
+</body>
+</html>

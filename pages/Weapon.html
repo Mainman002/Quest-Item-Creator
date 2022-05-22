@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Effect</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="module" src="Weapon.js"></script>
+</head>
+<body>
+    <script>
+        function showType(typeName) {
+            var i;
+            var x = document.getElementsByClassName("type");
+            for (i = 0; i < x.length; i++) {
+              x[i].style.display = "none";
+            }
+            document.getElementById(typeName).style.display = "flex";
+          }
+    </script>
+
+<header id="header">
+    <div id="row_left" class="type_bar">
+        <a id="btn" href="Effect.html">Effect</a>
+        <a id="btn" href="Spell.html">Spell</a>
+        <a id="btn" href="Item.html">Item</a>
+        <a id="btn" href="Ammo.html">Ammo</a>
+        <a id="btn_pressed">Weapon</a>
+    </div>
+</header>
+
+<div id="main">
+    <div id="left_panel">
+        <!-- <label for="name">Name:</label> -->
+        <input value="Name" type="text" name="name" id="item_name">
+
+        <div id="row_left">
+            <label>StackMax:</label>
+            <input type="number" value=0 name="damage" id="damage">
+        </div>
+        
+        <div id="row_left">
+            <label>StackDefault:</label>
+            <input type="number" value=0 name="damage" id="damage">
+        </div>
+
+        <div id="row_left">
+            <label>Speed:</label>
+            <input type="number" value=0 name="damage" id="damage">
+        </div>
+                
+        <div id="row_left">
+            <label>Damage:</label>
+            <input type="number" value=0 name="damage" id="damage">
+        </div>    
+        
+        <div id="row_left">
+            <label>Range:</label>
+            <input type="number" value=0 name="damage" id="damage">
+        </div>
+
+        <div id="row_left">
+            <label>Copper:</label>
+            <input type="number" value=0 name="damage" id="damage">
+        </div>
+
+        <div id="row_left">
+            <label>Silver:</label>
+            <input type="number" value=0 name="damage" id="damage">
+        </div>
+
+        <div id="row_left">
+            <label>Tin:</label>
+            <input type="number" value=0 name="damage" id="damage">
+        </div>
+
+        <div id="row_left">
+            <label>Gold:</label>
+            <input type="number" value=0 name="damage" id="damage">
+        </div>
+
+        <div id="row_left">
+            <!-- <label>Common:</label>
+            <input type="checkbox" Checked name="Common" id="common"> -->
+            <label for="common">Common:</label>
+            <select name="common" id="common">
+            <option value="COMMON">Common</option>
+            <option value="UNCOMMON">UnCommon</option>
+            </select>
+        </div>
+
+        <div id="row_left">
+            <!-- Types -->
+            <label for="types">Type:</label>
+            <select name="itemType" id="itemType">
+            <option value="'WEAPON'">Weapon</option>
+            </select>
+        </div>
+
+        <!-- <div id="row_left"> -->
+            <!-- Ammo Types -->
+            <!-- <label for="skill">Skill:</label>
+            <select name="skill" id="skill">
+            <option value="">None</option>
+            <option value="Arrow">Bow</option>
+            <option value="CrossbowProjectilehuge">Crossbow</option>
+            </select>
+        </div> -->
+
+        <!-- <div id="row_left"> -->
+            <!-- Projectile -->
+            <!-- <label for="projectile">Projectile:</label>
+            <select name="projectile" id="projectile">
+            <option value="">None</option>
+            <option value="ArrowProjectile">Arrow</option>
+            <option value="CrossbowProjectile">Crossbow</option>
+            <option value="CrossbowProjectilehuge">Crossbow Huge</option>
+            </select>
+        </div> -->
+        
+        <input type="button" value="Copy Values" id="copyBtn">
+    </div>
+
+    <div id="right_panel">
+        <select name="bitmap" id="bitmap">
+        <option value="">None</option>
+        <option value="EQUIPMENT/BOWS/3">bow_03</option>
+        <option value="EQUIPMENT/MACE/EMERALD/2">Emerald Tenderizer</option>
+        </select>
+
+        <canvas id="canvas" width="256" height="256"></canvas>
+    </div>
+</div>
+
+</body>
+</html>
