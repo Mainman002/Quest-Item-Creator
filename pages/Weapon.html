@@ -31,8 +31,8 @@
         <a class="btn" href="Quest.html">Quest</a>
     </div>
 
-    <label id="item_result_text">Result:</label>
-    <input value="" type="text" id="item_result">
+    <!-- <label id="item_result_text">Result:</label>
+    <input value="" type="text" id="item_result"> -->
 
 </div>
 
@@ -107,8 +107,8 @@
                 </div>
 
                 <div class="label">
-                    <!-- <label>Common:</label>
-                    <span class="left_span"></span> -->
+                    <label>Rarity:</label>
+                    <span class="left_span"></span>
                     <div class="label_value">
                         <select name="common" id="common">
                         <option value="COMMON">Common</option>
@@ -118,39 +118,75 @@
                 </div>
 
                 <div class="label">
-                    <!-- <label>Weapon:</label>
-                    <span class="left_span"></span> -->
+                    <label>Type:</label>
+                    <span class="left_span"></span>
                     <div class="label_value">
-                        <select name="itemType" id="itemType">
-                        <option value="'WEAPON'">Weapon</option>
-                        <option value="'BOW'">Bow</option>
+                        <select name="item_type" id="item_type">
+                            <option value="'WEAPON'">Weapon</option>
+                            <option value="'BOW'">Bow</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="label">
+                    <label>Skill:</label>
+                    <span class="left_span"></span>
+                    <div class="label_value">
+                        <select name="skill" id="skill">
+                            <option value="">None</option>
+                            <option value="1H Slash">1H Hand</option>
+                            <option value="2H Slash">1H Hand</option>
+                            <option value="1H Impact">1H Impact</option>
+                            <option value="2H Impact">2H Impact</option>
+                            <option value="Martial">Martial</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="label">
+                    <label>Slot:</label>
+                    <span class="left_span"></span>
+                    <div class="label_value">
+                        <select name="slot" id="slot">
+                            <option value="RPG_SLOT_PRIMARY,">Right Hand</option>
+                            <option value=",RPG_SLOT_SECONDARY">Left Hand</option>
+                            <option value="RPG_SLOT_PRIMARY, RPG_SLOT_SECONDARY">Either</option>
                         </select>
                     </div>
                 </div>
 
                 <div class="label">
+                    <label>Destructable:</label>
+                    <span class="left_span"></span>
                     <div class="label_value">
-                        <select name="skill" id="skill">
-                        <option value="">None</option>
-                        <option value="1H Hand">1H Hand</option>
-                        <option value="2H Hand">2H Hand</option>
-                        <option value="1H Impact">1H Impact</option>
-                        <option value="2H Impact">2H Impact</option>
-                        <option value="Martial">Martial</option>
+                        <select name="destructable" id="destructable">
+                            <option value="">Destroyable</option>
+                            <option value="RPG_ITEM_INDESTRUCTIBLE">Indestructable</option>
                         </select>
                     </div>
                 </div>
-
-                <!-- <div class="label">
+                
+                <div class="label">
+                    <label>Model:</label>
+                    <span class="left_span"></span>
                     <div class="label_value">
-                        <select name="projectile" id="projectile">
-                        <option value="">None</option>
-                        <option value="ArrowProjectile">Arrow</option>
-                        <option value="CrossbowProjectile">Crossbow</option>
-                        <option value="CrossbowProjectilehuge">Crossbow Huge</option>
+                        <select name="model" id="model">
+                            <option value="weapons/dagger00.dts">dagger_00</option>
+                            <option value="weapons/bow04.dts">bow_04</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="label">
+                    <label>Material:</label>
+                    <span class="left_span"></span>
+                    <div class="label_value">
+                        <select name="material" id="material">
+                        <option value="">Blank</option>
+                        <!-- <option value="weapons/dagger00.dts">dagger_00</option> -->
                     </select>
                     </div>
-                </div> -->
+                </div>
 
                 <div class="label">
                     <!-- <span class="left_span"></span> -->
@@ -158,14 +194,15 @@
                         <input type="button" value="Copy Values" id="copyBtn">
                     </div>
                 </div>
-
+                
             </div>
         </div>
         <div class="right_side">
             <!-- <input type="button" value="Copy Values" id="copyBtn"> -->
             
             <select name="bitmap" id="bitmap">
-            <option value="">None</option>
+            <!-- <option value="">None</option> -->
+            <option value="EQUIPMENT/SWORDS/24">Sword_24</option>
             <option value="EQUIPMENT/BOWS/3">bow_03</option>
             <option value="EQUIPMENT/MACE/EMERALD/1">Emerald_01</option>
             <option value="EQUIPMENT/MACE/EMERALD/2">Emerald_02</option>
@@ -177,6 +214,24 @@
             <canvas id="canvas" width="256" height="256"></canvas>
 
         </div>
+
+    <div>
+        <div class="label">
+            <label>Description:</label>
+            <span class="left_span"></span>
+            <div class="label_value">
+                <textarea id="desc" cols="40" rows="16"></textarea>
+            </div>
+        </div>
+
+        <div class="label">
+            <label>Output:</label>
+            <span class="left_span"></span>
+            <div class="label_value">
+                <textarea id="item_result" cols="40" rows="16"></textarea>
+            </div>
+        </div>
+    </div>
 
         <!-- <span class="left_span"></span> -->
 

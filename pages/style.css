@@ -37,10 +37,10 @@ canvas {
     /* background-color: #000000; */
     color: white;
     margin-top: 60px; /* Add a top margin to avoid content overlay */
-    height: 85vh;
-    width: 100vw;
+    height: fit-content;
+    width: fit-content;
     margin: 0px 0px;
-    padding-top: 60px;
+    padding-top: 30px;
     padding-bottom: 0px;
     overflow: hidden;
 }
@@ -146,26 +146,6 @@ canvas {
     height: 30px;
 }
 
-#item_result_text {
-    /* background-color:#77473b; */
-    color: #fff;
-    border: 2px solid teal; 
-    border-radius:4px; 
-    padding:4px;
-    height:fit-content; 
-    width: fit-content;
-}
-
-#item_result {
-    background-color:#77473b;
-    color: #fff;
-    border: 2px solid teal; 
-    border-radius:4px; 
-    padding:4px;
-    height:fit-content; 
-    min-width: 70vw;
-}
-
 #copyBtn {
     background-color:#77473b;
     color: #fff;
@@ -227,3 +207,31 @@ canvas {
     height:fit-content; 
     width: fit-content;
 }
+
+input[type="text"], textarea {
+    background-color : #77473b; 
+    color: white;
+}
+
+.label_value {
+    background-color:#77473b;
+    color: #fff;
+    border:none; 
+    border-radius:4px; 
+    padding:4px;
+    height:fit-content; 
+    width: fit-content;
+}
+
+.label_value:hover {
+    background-color:#ad4e00;
+    transition: 0.2s;
+}
+
+.label_value:active {
+    background-color: #bc8d00;
+    transition: 0.1s;
+    color: rgb(0, 0, 0);
+}
+
+

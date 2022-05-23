@@ -2,14 +2,7 @@ import {Images} from "./resources.js";
 const img = new Images();
 
 const ctx = canvas.getContext("2d");
-const item_result = document.getElementById("item_result");
-const copyBtn = document.getElementById("copyBtn");
-const common = document.getElementById("common");
-const item_type = document.getElementById("itemType");
-// const skill = document.getElementById("skill");
-// const projectile = document.getElementById("projectile");
-const bitmap = document.getElementById("bitmap");
-let item_values = {name:"",common:"", itemType:"",skill:"",bitmap:""};
+let item_values = {name:"",common:"", item_type:"",skill:"",slot:"",destructable:"",bitmap:"",speed:"",damage:"",range:"",bronze:"",silver:"",tin:"",gold:"",desc:""};
 let combined_values = "";
 let has_bitmap = false;
 
@@ -39,11 +32,12 @@ function DrawImageSimple (_ctx, _image, _pos, _size, _a) {
 function value_changed() {
     setTimeout(function() {
         console.log( combined_values );
+        return_values();
     }, 100);
 }
 
-function return_values() {
-    combined_values = `['${item_values['name']}',"['${item_values['common']}',${item_values['itemType']}]",'${item_values['skill']}','${item_values['projectile']}','${item_values['bitmap']}',(RPG_SLOT_AMMO,)],`;
+function return_values() { 
+    combined_values = `['${item_values['name']}',"[${item_values['item_type']},'${item_values['common']}']",'${item_values['skill']}','${item_values['bitmap']}',(${item_values['slot']}),'${item_values['destructable']}',${item_values['speed']},${item_values['damage']},${item_values['range']},${item_values['copper']},${item_values['silver']},${item_values['tin']},${item_values['gold']},'${item_values['desc']}'],`;
     item_result.value = combined_values;
     setTimeout(function() {
         value_changed();
@@ -64,10 +58,10 @@ class Main {
     }
 
     draw() {
-        if ( has_bitmap ) {
+        // if ( has_bitmap ) {
             // console.log( item_values["bitmap"] )
-            DrawImageSimple(ctx, this.images[ item_values["bitmap"] ], {x:0,y:0}, {w:canvas.width,h:canvas.height}, 1)
-        }
+        DrawImageSimple(ctx, this.images[ item_values["bitmap"] ], {x:0,y:0}, {w:canvas.width,h:canvas.height}, 1)
+        // }
         
         // ctx.fillStyle = 'Red';
         // ctx.fillRect(0,0,64,64);
@@ -78,30 +72,48 @@ addEventListener('load', (e) => {
     const main = new (Main)()
 
     item_values["name"] = item_name.value
-    item_values["common"] = 'COMMON'
-    item_values["itemType"] = item_type.value
+    item_values["common"] =  common.value
+    item_values["item_type"] = item_type.value
+    item_values["skill"] = skill.value
+    item_values["slot"] = slot.value
+    item_values["destructable"] = destructable.value
     item_values["bitmap"] = bitmap.value
+    item_values["speed"] = speed.value
+    item_values["damage"] = damage.value
+    item_values["range"] = range.value
+    item_values["copper"] = copper.value
+    item_values["silver"] = silver.value
+    item_values["tin"] = tin.value
+    item_values["gold"] = gold.value
+    item_values["desc"] = desc.value
 
-    addEventListener("change", function() {
+    item_name.addEventListener("change", function() {
         item_values["name"] = item_name.value
         value_changed();
     });
 
-    let common_checked = true;
     common.addEventListener("click", function() {
-        common_checked = !common_checked;
-        if ( common_checked == true ) {
-            item_values["common"] = "COMMON";
-        } 
-
-        if ( common_checked == false ) {
-            item_values["common"] = "UNCOMMON";
-        }
+        item_values["common"] = common.value
         value_changed();
     });
 
     item_type.addEventListener("change", function() {
-        item_values["itemType"] = item_type.value
+        item_values["item_type"] = item_type.value
+        value_changed();
+    });
+
+    skill.addEventListener("change", function() {
+        item_values["skill"] = skill.value
+        value_changed();
+    });
+
+    slot.addEventListener("change", function() {
+        item_values["slot"] = slot.value
+        value_changed();
+    });
+
+    destructable.addEventListener("change", function() {
+        item_values["destructable"] = destructable.value
         value_changed();
     });
     
@@ -112,6 +124,46 @@ addEventListener('load', (e) => {
             has_bitmap = false
         }
         item_values["bitmap"] = bitmap.value
+        value_changed();
+    });
+
+    speed.addEventListener("change", function() {
+        item_values["speed"] = speed.value
+        value_changed();
+    });
+
+    damage.addEventListener("change", function() {
+        item_values["damage"] = damage.value
+        value_changed();
+    });
+
+    range.addEventListener("change", function() {
+        item_values["range"] = range.value
+        value_changed();
+    });
+
+    copper.addEventListener("change", function() {
+        item_values["copper"] = copper.value
+        value_changed();
+    });
+
+    silver.addEventListener("change", function() {
+        item_values["silver"] = silver.value
+        value_changed();
+    });
+
+    tin.addEventListener("change", function() {
+        item_values["tin"] = tin.value
+        value_changed();
+    });
+
+    gold.addEventListener("change", function() {
+        item_values["gold"] = gold.value
+        value_changed();
+    });
+
+    desc.addEventListener("change", function() {
+        item_values["desc"] = desc.value
         value_changed();
     });
 

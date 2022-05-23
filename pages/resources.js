@@ -19,7 +19,10 @@ export class Images {
             // Bow Items
             'EQUIPMENT/BOWS/3': Loader_Image('../src/items/EQUIPMENT/BOWS/3/0_0_0.png'),
 
-            // Weapon Items
+            // Swords Items
+            'EQUIPMENT/SWORDS/24': Loader_Image('../src/items/EQUIPMENT/SWORDS/24/0_0_0.png'),
+
+            // Maces
             'EQUIPMENT/MACE/EMERALD/1': Loader_Image('../src/items/EQUIPMENT/MACE/EMERALD/1/0_0_0.png'),
             'EQUIPMENT/MACE/EMERALD/2': Loader_Image('../src/items/EQUIPMENT/MACE/EMERALD/2/0_0_0.png'),
             'EQUIPMENT/MACE/EMERALD/3': Loader_Image('../src/items/EQUIPMENT/MACE/EMERALD/3/0_0_0.png'),
