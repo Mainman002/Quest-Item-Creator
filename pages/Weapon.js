@@ -32,13 +32,17 @@ function DrawImageSimple (_ctx, _image, _pos, _size, _a) {
 function value_changed() {
     setTimeout(function() {
         console.log( combined_values );
-        return_values();
+        set_values();
     }, 100);
 }
 
-function return_values() { 
+function set_values() {
     combined_values = `['${item_values['name']}',"[${item_values['item_type']},'${item_values['common']}']",'${item_values['skill']}','${item_values['bitmap']}',(${item_values['slot']}),'${item_values['destructable']}',${item_values['speed']},${item_values['damage']},${item_values['range']},${item_values['copper']},${item_values['silver']},${item_values['tin']},${item_values['gold']},'${item_values['desc']}'],`;
     item_result.value = combined_values;
+}
+
+function return_values() { 
+    set_values();
     setTimeout(function() {
         value_changed();
         navigator.clipboard.writeText(combined_values);
@@ -89,32 +93,32 @@ addEventListener('load', (e) => {
 
     item_name.addEventListener("change", function() {
         item_values["name"] = item_name.value
-        value_changed();
+        set_values();
     });
 
     common.addEventListener("click", function() {
         item_values["common"] = common.value
-        value_changed();
+        set_values();
     });
 
     item_type.addEventListener("change", function() {
         item_values["item_type"] = item_type.value
-        value_changed();
+        set_values();
     });
 
     skill.addEventListener("change", function() {
         item_values["skill"] = skill.value
-        value_changed();
+        set_values();
     });
 
     slot.addEventListener("change", function() {
         item_values["slot"] = slot.value
-        value_changed();
+        set_values();
     });
 
     destructable.addEventListener("change", function() {
         item_values["destructable"] = destructable.value
-        value_changed();
+        set_values();
     });
     
     bitmap.addEventListener("change", function() {
@@ -124,52 +128,52 @@ addEventListener('load', (e) => {
             has_bitmap = false
         }
         item_values["bitmap"] = bitmap.value
-        value_changed();
+        set_values();
     });
 
     speed.addEventListener("change", function() {
         item_values["speed"] = speed.value
-        value_changed();
+        set_values();
     });
 
     damage.addEventListener("change", function() {
         item_values["damage"] = damage.value
-        value_changed();
+        set_values();
     });
 
     range.addEventListener("change", function() {
         item_values["range"] = range.value
-        value_changed();
+        set_values();
     });
 
     copper.addEventListener("change", function() {
         item_values["copper"] = copper.value
-        value_changed();
+        set_values();
     });
 
     silver.addEventListener("change", function() {
         item_values["silver"] = silver.value
-        value_changed();
+        set_values();
     });
 
     tin.addEventListener("change", function() {
         item_values["tin"] = tin.value
-        value_changed();
+        set_values();
     });
 
     gold.addEventListener("change", function() {
         item_values["gold"] = gold.value
-        value_changed();
+        set_values();
     });
 
     desc.addEventListener("change", function() {
         item_values["desc"] = desc.value
-        value_changed();
+        set_values();
     });
 
     copyBtn.addEventListener("click", function() {
-        value_changed();
-        return_values()
+        set_values();
+        return_values();
     });
 
     const deltaTime = 1 / 60
