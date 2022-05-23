@@ -2,11 +2,13 @@ import {Images} from "./resources.js";
 const img = new Images();
 
 const ctx = canvas.getContext("2d");
+const item_result = document.getElementById("item_result");
 const copyBtn = document.getElementById("copyBtn");
 const common = document.getElementById("common");
-const item_type = document.getElementById("itemType");
-const skill = document.getElementById("skill");
-const projectile = document.getElementById("projectile");
+const item_name = document.getElementById("item_name");
+// const item_type = document.getElementById("itemType");
+// const skill = document.getElementById("skill");
+// const projectile = document.getElementById("projectile");
 const bitmap = document.getElementById("bitmap");
 let item_values = {name:"",common:"", itemType:"",skill:"",projectile:"",bitmap:""};
 let combined_values = "";
@@ -43,6 +45,7 @@ function value_changed() {
 
 function return_values() {
     combined_values = `['${item_values['name']}',"['${item_values['common']}',${item_values['itemType']}]",'${item_values['skill']}','${item_values['projectile']}','${item_values['bitmap']}',(RPG_SLOT_AMMO,)],`;
+    item_result.value = combined_values;
     setTimeout(function() {
         value_changed();
         navigator.clipboard.writeText(combined_values);
@@ -77,43 +80,35 @@ addEventListener('load', (e) => {
 
     item_values["name"] = item_name.value
     item_values["common"] = 'COMMON'
-    item_values["itemType"] = item_type.value
-    item_values["skill"] = skill.value
-    item_values["projectile"] = projectile.value
+    // item_values["itemType"] = item_type.value
+    // item_values["skill"] = skill.value
+    // item_values["projectile"] = projectile.value
     item_values["bitmap"] = bitmap.value
 
-    addEventListener("change", function() {
+    item_name.addEventListener("change", function() {
         item_values["name"] = item_name.value
         value_changed();
     });
 
-    let common_checked = true;
-    common.addEventListener("click", function() {
-        common_checked = !common_checked;
-        if ( common_checked == true ) {
-            item_values["common"] = "COMMON";
-        } 
-
-        if ( common_checked == false ) {
-            item_values["common"] = "UNCOMMON";
-        }
+    common.addEventListener("change", function() {
+        item_values["common"] = common.value
         value_changed();
     });
 
-    item_type.addEventListener("change", function() {
-        item_values["itemType"] = item_type.value
-        value_changed();
-    });
+    // item_type.addEventListener("change", function() {
+    //     item_values["itemType"] = item_type.value
+    //     value_changed();
+    // });
 
-    skill.addEventListener("change", function() {
-        item_values["skill"] = skill.value
-        value_changed();
-    });
+    // skill.addEventListener("change", function() {
+    //     item_values["skill"] = skill.value
+    //     value_changed();
+    // });
 
-    projectile.addEventListener("change", function() {
-        item_values["projectile"] = projectile.value
-        value_changed();
-    });
+    // projectile.addEventListener("change", function() {
+    //     item_values["projectile"] = projectile.value
+    //     value_changed();
+    // });
     
     bitmap.addEventListener("change", function() {
         if ( bitmap.value ) {

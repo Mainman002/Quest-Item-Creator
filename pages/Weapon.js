@@ -2,6 +2,7 @@ import {Images} from "./resources.js";
 const img = new Images();
 
 const ctx = canvas.getContext("2d");
+const item_result = document.getElementById("item_result");
 const copyBtn = document.getElementById("copyBtn");
 const common = document.getElementById("common");
 const item_type = document.getElementById("itemType");
@@ -42,7 +43,8 @@ function value_changed() {
 }
 
 function return_values() {
-    combined_values = `['${item_values['name']}',"['${item_values['common']}',${item_values['itemType']}]",'${item_values['bitmap']}',(RPG_SLOT_AMMO,)],`;
+    combined_values = `['${item_values['name']}',"['${item_values['common']}',${item_values['itemType']}]",'${item_values['skill']}','${item_values['projectile']}','${item_values['bitmap']}',(RPG_SLOT_AMMO,)],`;
+    item_result.value = combined_values;
     setTimeout(function() {
         value_changed();
         navigator.clipboard.writeText(combined_values);

@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Effect</title>
+    <title>Quest</title>
     <link rel="stylesheet" href="style.css">
-    <script type="module" src="Effect.js"></script>
+    <script type="module" src="Quest.js"></script>
 </head>
 <body>
     <script>
@@ -20,21 +20,20 @@
           }
     </script>
 
-
 <div class="header">
     <div class="header_inner">
-        <a class="btn_pressed">Effect</a>
+        <a class="btn" href="Effect.html">Effect</a>
         <a class="btn" href="Spell.html">Spell</a>
         <a class="btn" href="Item.html">Item</a>
         <a class="btn" href="Ammo.html">Ammo</a>
         <a class="btn" href="Weapon.html">Weapon</a>
         <a class="btn" href="Craft.html">Craft</a>
-        <a class="btn" href="Quest.html">Quest</a>
+        <a class="btn_pressed">Quest</a>
     </div>
 
     <label id="item_result_text">Result:</label>
     <input value="" type="text" id="item_result">
-
+    
 </div>
 
 <div class="main">
@@ -52,32 +51,38 @@
                 </div>
 
                 <div class="label">
-                    <label>Speed:</label>
+                    <label>Copper:</label>
                     <span class="left_span"></span>
                     <div class="label_value">
-                        <input type="number" value=0 id="speed">
+                        <input type="number" value=0 id="copper">
                     </div>
                 </div>
 
                 <div class="label">
-                    <label>Damage:</label>
+                    <label>Silver:</label>
                     <span class="left_span"></span>
                     <div class="label_value">
-                        <input type="number" value=0 id="damage">
+                        <input type="number" value=0 id="silver">
                     </div>
                 </div>
 
                 <div class="label">
-                    <label>Range:</label>
+                    <label>Tin:</label>
                     <span class="left_span"></span>
                     <div class="label_value">
-                        <input type="number" value=0 id="range">
+                        <input type="number" value=0 id="tin">
                     </div>
                 </div>
 
                 <div class="label">
-                    <!-- <label>Common:</label>
-                    <span class="left_span"></span> -->
+                    <label>Gold:</label>
+                    <span class="left_span"></span>
+                    <div class="label_value">
+                        <input type="number" value=0 id="gold">
+                    </div>
+                </div>
+
+                <div class="label">
                     <div class="label_value">
                         <select name="common" id="common">
                         <option value="COMMON">Common</option>
@@ -88,43 +93,23 @@
 
                 <!-- <div class="label">
                     <div class="label_value">
-                        <select name="effectType" id="effectType">
-                        <option value="'LEECH'">Leech</option>
+                        <select name="itemType" id="itemType">
+                        <option value="'None'">None</option>
+                        <option value="'HEAL'">Heal</option>
+                        <option value="'LEECH'">Leach</option>
                         </select>
-                    </div>
-                </div> -->
-
-                <!-- <div class="label">
-                    <div class="label_value">
-                        <select name="skill" id="skill">
-                        <option value="">None</option>
-                        <option value="Arrow">Bow</option>
-                        <option value="CrossbowProjectilehuge">Crossbow</option>
-                        </select>
-                    </div>
-                </div> -->
-
-                <!-- <div class="label">
-                    <div class="label_value">
-                        <select name="projectile" id="projectile">
-                        <option value="">None</option>
-                        <option value="ArrowProjectile">Arrow</option>
-                        <option value="CrossbowProjectile">Crossbow</option>
-                        <option value="CrossbowProjectilehuge">Crossbow Huge</option>
-                    </select>
                     </div>
                 </div> -->
 
                 <div class="label">
                     <div class="label_value">
-                        <input type="button" value="Copy Values" class="copyBtn" id="copyBtn">
+                        <input type="button" value="Copy Values" id="copyBtn">
                     </div>
                 </div>
 
             </div>
         </div>
         <div class="right_side">
-            
             <select name="bitmap" id="bitmap">
             <option value="">None</option>
             <!-- <option value="EQUIPMENT/BOWS/3">bow_03</option> -->

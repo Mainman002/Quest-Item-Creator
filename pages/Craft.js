@@ -5,9 +5,10 @@ const ctx = canvas.getContext("2d");
 const item_result = document.getElementById("item_result");
 const copyBtn = document.getElementById("copyBtn");
 const common = document.getElementById("common");
-const item_type = document.getElementById("itemType");
-const skill = document.getElementById("skill");
-const projectile = document.getElementById("projectile");
+const item_name = document.getElementById("item_name");
+// const item_type = document.getElementById("itemType");
+// const skill = document.getElementById("skill");
+// const projectile = document.getElementById("projectile");
 const bitmap = document.getElementById("bitmap");
 let item_values = {name:"",common:"", itemType:"",skill:"",projectile:"",bitmap:""};
 let combined_values = "";
@@ -78,27 +79,19 @@ addEventListener('load', (e) => {
     const main = new (Main)()
 
     item_values["name"] = item_name.value
-    item_values["common"] = 'COMMON'
+    item_values["common"] = common.value
     // item_values["itemType"] = item_type.value
     // item_values["skill"] = skill.value
     // item_values["projectile"] = projectile.value
     item_values["bitmap"] = bitmap.value
 
-    addEventListener("change", function() {
+    item_name.addEventListener("change", function() {
         item_values["name"] = item_name.value
         value_changed();
     });
-
-    let common_checked = true;
-    common.addEventListener("click", function() {
-        common_checked = !common_checked;
-        if ( common_checked == true ) {
-            item_values["common"] = "COMMON";
-        } 
-
-        if ( common_checked == false ) {
-            item_values["common"] = "UNCOMMON";
-        }
+    
+    common.addEventListener("change", function() {
+        item_values["common"] = common.value
         value_changed();
     });
 
@@ -126,10 +119,10 @@ addEventListener('load', (e) => {
         item_values["bitmap"] = bitmap.value
         value_changed();
     });
-
-    copyBtn.addEventListener("click", function() {
+    
+    copyBtn.addEventListener("click", function(e) {
         value_changed();
-        return_values()
+        return_values();
     });
 
     const deltaTime = 1 / 60
