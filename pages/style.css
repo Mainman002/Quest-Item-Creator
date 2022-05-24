@@ -55,11 +55,14 @@ canvas {
 
 .column_left {
     /* border: 2px solid rgb(13, 255, 0); */
+    width: fit-content;
+    height: fit-content;
     display: flex;
     flex-flow: column;
     align-items: right;
     justify-content: right;
     row-gap: 10px;
+    overflow-y: auto;
 }
 
 .left_span {
@@ -165,16 +168,6 @@ canvas {
     background-color: #bc8d00;
     transition: 0.1s;
     color: rgb(0, 0, 0);
-}
-
-#copyBtn_pressed {
-    background-color:#a8802a;
-    color: rgb(49, 49, 49);
-    border:none; 
-    border-radius:8px; 
-    padding:4px;
-    height:fit-content; 
-    width: fit-content;
 }
 
 .btn {
