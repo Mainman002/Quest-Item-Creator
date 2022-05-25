@@ -105,7 +105,7 @@ canvas {
     /* border: 2px solid rgb(13, 255, 0); */
     width: fit-content;
     height: fit-content;
-    min-width: 280px;
+    min-width: 295px;
     padding-top: 0px;
     padding-bottom: 0px;
     display: flex;
@@ -114,6 +114,22 @@ canvas {
     overflow-x: hidden;
     align-items: center;
     justify-content: center;
+}
+
+.align_left {
+    /* border: 2px solid rgb(13, 255, 0); */
+    width: fit-content;
+    height: fit-content;
+    min-width: 295px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    margin-left: 20px;
+    display: flex;
+    flex-direction: row;
+    overflow-y: auto;
+    overflow-x: hidden;
+    align-items: left;
+    justify-content: left;
 }
 
 .header {
@@ -186,6 +202,27 @@ canvas {
 }
 
 .btn:active {
+    background-color: #bc8d00;
+    transition: 0.1s;
+    color: rgb(0, 0, 0);
+}
+
+.insertStatBtn {
+    background-color:#77473b;
+    color: #fff;
+    border:none; 
+    border-radius:4px; 
+    padding:4px;
+    height:fit-content; 
+    width: fit-content;
+}
+
+.insertStatBtn:hover {
+    background-color:#ad4e00;
+    transition: 0.2s;
+}
+
+.insertStatBtn:active {
     background-color: #bc8d00;
     transition: 0.1s;
     color: rgb(0, 0, 0);
