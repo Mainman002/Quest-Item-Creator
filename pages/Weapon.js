@@ -79,7 +79,7 @@ addEventListener('load', (e) => {
         
         this.images = img.dict;
         this.active_image = 0;
-        this.active_image_type = 0;
+        this.active_image_type = 10;
         }
 
         // update(dt) {
@@ -122,6 +122,9 @@ addEventListener('load', (e) => {
         set_values();
         return_values();
     });
+
+    set_img_list(main);
+    set_values();
 
     const deltaTime = 1 / 60
     let accumulatedTime = 0
