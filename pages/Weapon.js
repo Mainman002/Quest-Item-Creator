@@ -4,7 +4,7 @@ addEventListener('load', (e) => {
     const img = new Models();
 
     const ctx = canvas.getContext("2d");
-    const txt_update_items = [item_name,flag_common,flag_type,skill,slot_right,slot_left,destructable,material,speed,damage,range,armor,copper,silver,tin,gold,spell_name,desc,spell_trigger,spell_damage,race,equiped_particle,add_stats];
+    const txt_update_items = [item_name,speed,damage,range,armor,copper,silver,tin,gold,spell_name,desc,spell_damage,add_stats];
     const doc_items = [item_name,flag_common,flag_type,skill,slot_right,slot_left,destructable,bitmap,material,speed,damage,range,armor,copper,silver,tin,gold,spell_name,desc,spell_trigger,spell_damage,race,equiped_particle,add_stats]
     let item_values = {name:"",flag_common:"", flag_type:"",skill:"",slot_right:"",slot_left:"",destructable:"",bitmap:"",model:"",model_type:"",material:"",speed:"",damage:"",range:"",armor:"",bronze:"",silver:"",tin:"",gold:"",desc:"",race:"",spell_name:"",spell_trigger:"",spell_damage:"",equiped_particle:"",add_stats:""};
     let combined_values = "";
