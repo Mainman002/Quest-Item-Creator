@@ -166,7 +166,7 @@ canvas {
     height: 30px;
 }
 
-#copyBtn {
+#copyBtn,#insertAfxBtn,#insertStatBtn,.btn,#insertTextureBtn,#insertEmitterBtn {
     background-color:#77473b;
     color: #fff;
     border:none; 
@@ -177,56 +177,12 @@ canvas {
     width: fit-content;
 }
 
-#copyBtn:hover {
+#copyBtn:hover,#insertAfxBtn:hover,#insertStatBtn:hover,.btn:hover {
     background-color:#ad4e00;
     transition: 0.2s;
 }
 
-#copyBtn:active {
-    background-color: #bc8d00;
-    transition: 0.1s;
-    color: rgb(0, 0, 0);
-}
-
-.btn {
-    background-color:#77473b;
-    color: #fff;
-    border:none; 
-    border-radius:4px; 
-    padding:4px;
-    margin: 4px;
-    height:fit-content; 
-    width: fit-content;
-}
-
-.btn:hover {
-    background-color:#ad4e00;
-    transition: 0.2s;
-}
-
-.btn:active {
-    background-color: #bc8d00;
-    transition: 0.1s;
-    color: rgb(0, 0, 0);
-}
-
-.insertStatBtn {
-    background-color:#77473b;
-    color: #fff;
-    border:none; 
-    border-radius:4px; 
-    padding:4px;
-    margin: 4px;
-    height:fit-content; 
-    width: fit-content;
-}
-
-.insertStatBtn:hover {
-    background-color:#ad4e00;
-    transition: 0.2s;
-}
-
-.insertStatBtn:active {
+#copyBtn:active,#insertAfxBtn:active#insertStatBtn:active,.btn:active {
     background-color: #bc8d00;
     transition: 0.1s;
     color: rgb(0, 0, 0);
@@ -249,7 +205,24 @@ input[type="text"], textarea {
     color: white;
 }
 
+/* Weapon Page */
 #bitmap, #bitmap_type, #speed, #damage, #range, #armor, #copper, #silver, #tin, #gold, #flag_common, #flag_type, #skill, #slot_right, #slot_left, #destructable, #model, #model_type, #material, #race, #spell_name, #spell_trigger, #spell_damage, #equiped_particle, #insert_stat, #stat_amount {
+    border: 1px solid black;
+    background-color : #77473b; 
+    color: white;
+    margin: 4px;
+}
+
+/* Effect Page */
+/* #leech_tick,#leech_tick_rate,#drain_tick,#drain_tick_rate,#leech_type,#drain_type,#resist,#target,#add_effect,#effect_amount,#insert_effect,#insertStatBtn {
+    border: 1px solid black;
+    background-color : #77473b; 
+    color: white;
+    margin: 4px;
+} */
+
+/* Spell Page */
+#insertAfxBtn,#insert_afxCasting,#insert_afxBegin,#insert_afxEnd,#duration,#castTime,#recastTime,#castRange,#insert_afxEffectBegin,#insert_afxEffectEnd {
     border: 1px solid black;
     background-color : #77473b; 
     color: white;

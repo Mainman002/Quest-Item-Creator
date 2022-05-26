@@ -3,10 +3,17 @@ import {Models} from "./resources.js";
 addEventListener('load', (e) => {
     const img = new Models();
 
+    // ["Stolen Soul", "health", 1332, durSecond * 10, "health", 696, durSecond * 5, RPG_RESIST_DISEASE, (RPG_DMG_FIRE,0), ""],
+
+    // for ob in rec[0]: 
+    //     effect = DBEffectProto(name=ob[0],leechType=ob[1],leechTick=ob[2],leechTickRate=ob[3],drainType=ob[4],drainTick=ob[5],drainTickRate=ob[6],resist=ob[7]) 
+    //     if ob[8]: effect.addDamage(ob[8][0],ob[8][1])
+    //     if ob[9]: target=ob[9]
+
     const ctx = canvas.getContext("2d");
-    const txt_update_items = [item_name,flag_common,flag_type,skill,slot_right,slot_left,destructable,material,speed,damage,range,armor,copper,silver,tin,gold,spell_name,desc,spell_trigger,spell_damage,race,equiped_particle,add_stats];
-    const doc_items = [item_name,flag_common,flag_type,skill,slot_right,slot_left,destructable,bitmap,material,speed,damage,range,armor,copper,silver,tin,gold,spell_name,desc,spell_trigger,spell_damage,race,equiped_particle,add_stats]
-    let item_values = {name:"",flag_common:"", flag_type:"",skill:"",slot_right:"",slot_left:"",destructable:"",bitmap:"",model:"",model_type:"",material:"",speed:"",damage:"",range:"",armor:"",bronze:"",silver:"",tin:"",gold:"",desc:"",race:"",spell_name:"",spell_trigger:"",spell_damage:"",equiped_particle:"",add_stats:""};
+    const txt_update_items = [item_name,leech_tick,leech_tick_rate,drain_tick,drain_tick_rate,leech_type,drain_type,resist,bitmap_type,insert_effect,add_effect,copyBtn,item_result];
+    const doc_items = [item_name,leech_tick,leech_tick_rate,drain_tick,drain_tick_rate,leech_type,drain_type,resist,bitmap_type,insert_effect,add_effect,copyBtn,item_result]
+    let item_values = {name:"",leech_tick:"",leech_tick_rate:"",drain_tick:"",drain_tick_rate:"",leech_type:"",drain_type:"",resist:"",bitmap_type:"",insert_effect:"",add_effect:"",copyBtn:"",item_result:""};
     let combined_values = "";
     let bitmap_items = []
 
@@ -55,13 +62,9 @@ addEventListener('load', (e) => {
 
         for (let i = 0; i < doc_items.length; i++) {
             item_values[doc_items[i].name] = doc_items[i].value
-        }
+        }                                        
         
-        if ( item_values['spell_name'] ) {
-            combined_values = `["${item_values['item_name']}",["${item_values['flag_type']}","${item_values['flag_common']}"],"${item_values['skill']}",(${item_values['slot_right']},${item_values['slot_left']}),${item_values['destructable']},"${item_values['bitmap']}","${main.images[bitmap_type.selectedIndex][main.active_image][2]}","${item_values['material']}",${item_values['speed']},${item_values['damage']},${item_values['range']},${item_values['armor']},${item_values['copper']},${item_values['silver']},${item_values['tin']},${item_values['gold']},"${item_values['desc']}","${item_values['equiped_particle']}","${item_values['race']}",("${item_values['spell_name']}",${item_values['spell_trigger']},${item_values['spell_damage']}), [${item_values['add_stats']}] ],`;
-        } else {
-            combined_values = `["${item_values['item_name']}",["${item_values['flag_type']}","${item_values['flag_common']}"],"${item_values['skill']}",(${item_values['slot_right']},${item_values['slot_left']}),${item_values['destructable']},"${item_values['bitmap']}","${main.images[bitmap_type.selectedIndex][main.active_image][2]}","${item_values['material']}",${item_values['speed']},${item_values['damage']},${item_values['range']},${item_values['armor']},${item_values['copper']},${item_values['silver']},${item_values['tin']},${item_values['gold']},"${item_values['desc']}","${item_values['equiped_particle']}","${item_values['race']}","", [${item_values['add_stats']}] ],`;
-        }
+        combined_values = `["${item_values['item_name']}",${item_values['leech_tick']},durSecond*${item_values['leech_tick_rate']},${item_values['drain_tick']},durSecond*${item_values['drain_tick_rate']},${item_values['leech_type']},${item_values['drain_type']},${item_values['resist']},[${item_values['add_effect']}] ],`;
         item_result.value = combined_values;
     }
 
@@ -130,7 +133,7 @@ addEventListener('load', (e) => {
     });
 
     insertStatBtn.addEventListener("click", function() {
-        add_stats.value = add_stats.value + `(${insert_stat.value},${stat_amount.value}),`;
+        add_effect.value = add_effect.value + `(${insert_effect.value},${effect_amount.value}),`;
         set_values();
     });
 
@@ -172,15 +175,12 @@ addEventListener('load', (e) => {
     // Original Result
     // ["Emerald Tenderizer","['WEAPON']","1H Impact",(RPG_SLOT_PRIMARY,RPG_SLOT_SECONDARY),RPG_ITEM_INDESTRUCTIBLE,"EQUIPMENT/MACE/EMERALD/2","weapons/macebladed.dts",10,10,2,5,"","","",("Tenderize",RPG_ITEM_TRIGGER_MELEE,1), ""],
 
-    // New For Loop
-    // name=ob[0],itemType=ob[1],skill=ob[2],slots=ob[3],flags=ob[4],bitmap=ob[5],model=ob[6],material=ob[7],wpnRate=ob[8],wpnDamage=ob[9],wpnRange=ob[10],worthCopper=ob[11],worthSilver=ob[12],worthTin=ob[13],worthGold=ob[14],desc=ob[15],equippedParticle=ob[16],addRace=ob[17],addSpell=ob[18]
+// New For Loop
+// name=ob[0],leech_tick=ob[1],leech_tick_rate=ob[2],drain_tick=ob[3],drain_tick_rate=ob[4],leech_type=ob[5],drain_type=ob[6],resist=ob[7],add_effect=ob[8]
 
-
-    // Uncomment and use in tmmokit
-    // for ob in rec[9]:
-    //     item = DBItemProto(name=ob[0],itemType=ob[1],skill=ob[2],slots=ob[3],flags=ob[4],bitmap=ob[5],model=ob[6],material=ob[7],wpnRate=ob[8],wpnDamage=ob[9],wpnRange=ob[10],armor=ob[11],worthCopper=ob[12],worthSilver=ob[13],worthTin=ob[14],worthGold=ob[15],desc=ob[16]) 
-    //     if ob[17]: item.equippedParticle = ob[17]
-    //     if ob[18]: item.addRace(ob[18])
-    //     if ob[19]: item.addSpell( ob[19][0], ob[19][1], ob[19][2] )
-    //     if ob[20]:
-    //         for stat in ob[20]: item.addStat(stat[0],stat[1])
+// Uncomment and use in tmmokit
+// for ob in rec[9]:
+//     effect = DBEffectProto(name=ob[0],leechTick=ob[1],leechTickRate=ob[2],drainTick=ob[3],drainTickRate=ob[4],leechType=ob[5],drainType=ob[6],resist=ob[7]) 
+//     # if ob[8]: effect.target=ob[8]
+//     if ob[8]: 
+//         for damage in ob[8]: effect.addDamage(damage[0],damage[1])

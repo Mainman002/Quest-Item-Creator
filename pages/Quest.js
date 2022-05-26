@@ -1,5 +1,7 @@
 import {Models} from "./resources.js";
 
+alert("Page Not Ready Yet");
+
 addEventListener('load', (e) => {
     const img = new Models();
 

@@ -51,229 +51,58 @@
                 </div>
 
                 <div class="label">
-                    <label>Speed:</label>
+                    <label>Duration:</label>
                     <span class="left_span"></span>
                     <div class="label_value">
-                        <input type="number" value=0 name="speed" id="speed">
+                        <input type="number" value=0 name="duration" id="duration">
                     </div>
                 </div>
 
                 <div class="label">
-                    <label>Damage:</label>
+                    <label>Cast Time:</label>
                     <span class="left_span"></span>
                     <div class="label_value">
-                        <input type="number" value=0 name="damage" id="damage">
+                        <input type="number" value=0 name="castTime" id="castTime">
                     </div>
                 </div>
 
                 <div class="label">
-                    <label>Range:</label>
+                    <label>Recast TIme:</label>
                     <span class="left_span"></span>
                     <div class="label_value">
-                        <input type="number" value=0 name="range" id="range">
+                        <input type="number" value=0 name="recastTime" id="recastTime">
                     </div>
                 </div>
 
                 <div class="label">
-                    <label>Armor:</label>
+                    <label>Cast Range:</label>
                     <span class="left_span"></span>
                     <div class="label_value">
-                        <input type="number" value=0 name="armor" id="armor">
+                        <input type="number" value=0 name="castRange" id="castRange">
                     </div>
                 </div>
 
                 <div class="label">
-                    <label>Copper:</label>
+                    <label>Texture:</label>
                     <span class="left_span"></span>
                     <div class="label_value">
-                        <input type="number" value=0 name="copper" id="copper">
-                    </div>
-                </div>
-
-                <div class="label">
-                    <label>Silver:</label>
-                    <span class="left_span"></span>
-                    <div class="label_value">
-                        <input type="number" value=0 name="silver" id="silver">
-                    </div>
-                </div>
-
-                <div class="label">
-                    <label>Tin:</label>
-                    <span class="left_span"></span>
-                    <div class="label_value">
-                        <input type="number" value=0 name="tin" id="tin">
-                    </div>
-                </div>
-
-                <div class="label">
-                    <label>Gold:</label>
-                    <span class="left_span"></span>
-                    <div class="label_value">
-                        <input type="number" value=0 name="gold" id="gold">
-                    </div>
-                </div>
-
-                <div class="label">
-                    <label>Rarity:</label>
-                    <span class="left_span"></span>
-                    <div class="label_value">
-                        <select name="flag_common" id="flag_common">
-                        <option value="">None</option>
-                        <option value="COMMON">Common</option>
-                        <option value="UNCOMMON">UnCommon</option>
+                        <select name="insert_afxCasting" id="insert_afxCasting">                        
+                            <option value='"wake"'>wake</option>
+                            <option value='"fire2"'>fire2</option>
                         </select>
                     </div>
                 </div>
 
                 <div class="label">
-                    <label>Type:</label>
+                    <label>Emitter:</label>
                     <span class="left_span"></span>
                     <div class="label_value">
-                        <select name="flag_type" id="flag_type">
-                            <option value="WEAPON">Weapon</option>
-                            <option value="SHIELD">Shield</option>
-                            <option value="BOW">Bow</option>
+                        <select name="insert_afxEffectBegin" id="insert_afxEffectBegin">                     
+                            <option value='"WakeEmitter"'>Wake</option>
+                            <option value='"DragonFireEmitter"'>Dragon Fire</option>
+                            <option value='"ThorHammerImpact"'>ThorHammerImpact</option>
+                            <option value='"Stun"'>Stun</option>
                         </select>
-                    </div>
-                </div>
-                
-                <div class="label">
-                    <label>Skill:</label>
-                    <span class="left_span"></span>
-                    <div class="label_value">
-                        <select name="skill" id="skill">
-                            <option value="">None</option>
-                            <option value="1H Slash">1H Slash</option>
-                            <option value="2H Slash">2H Slash</option>
-                            <option value="1H Impact">1H Impact</option>
-                            <option value="2H Impact">2H Impact</option>
-                            <option value="Martial">Martial</option>
-                            <option value="Shields">Shields</option>
-                        </select>
-                    </div>
-                </div>
-                
-                <div class="label">
-                    <label>Primary:</label>
-                    <span class="left_span"></span>
-                    <div class="label_value">
-                        <select name="slot_right" id="slot_right">
-                            <option value="RPG_SLOT_PRIMARY">Hand</option>
-                            <option value="RPG_SLOT_SHIELD">Shield</option>
-                            <option value="RPG_SLOT_RANGED">Ranged</option>
-                            <option value="RPG_SLOT_AMMO">Ammo</option>
-                            <option value="RPG_SLOT_HEAD">Head</option>
-                            <option value="RPG_SLOT_CHEST">Chest</option>
-                            <option value="RPG_SLOT_NECK">Neck</option>
-                            <option value="RPG_SLOT_RFINGER">Finger</option>
-                            <option value="RPG_SLOT_RWRIST">Wrist</option>
-                            <option value="RPG_SLOT_REAR">Ear</option>
-                        </select>
-                    </div>
-                </div>
-
-                <div class="label">
-                    <label>Offhand:</label>
-                    <span class="left_span"></span>
-                    <div class="label_value">
-                        <select name="slot_left" id="slot_left">
-                            <option value="RPG_SLOT_SECONDARY">Hand</option>
-                            <option value="RPG_SLOT_SHIELD">Shield</option>
-                            <option value="RPG_SLOT_RANGED">Ranged</option>
-                            <option value="RPG_SLOT_AMMO">Ammo</option>
-                            <option value="RPG_SLOT_HEAD">Head</option>
-                            <option value="RPG_SLOT_CHEST">Chest</option>
-                            <option value="RPG_SLOT_NECK">Neck</option>
-                            <option value="RPG_SLOT_LFINGER,RPG_SLOT_LFINGER">Finger</option>
-                            <option value="RPG_SLOT_LWRIST,RPG_SLOT_LWRIST">Wrist</option>
-                            <option value="RPG_SLOT_LEAR,RPG_SLOT_LEAR">Ear</option>                            
-                        </select>
-                    </div>
-                </div>
-
-                <div class="label">
-                    <label>Rarity:</label>
-                    <span class="left_span"></span>
-                    <div class="label_value">
-                        <select name="destructable" id="destructable">
-                            <!-- <option value='""'>Destroyable</option> -->
-                            <option value="RPG_ITEM_INDESTRUCTIBLE">Indestructable</option>
-                            <option value="RPG_ITEM_PREMIUM">Premium</option>
-                            <option value="RPG_ITEM_COMMON">Common</option>
-                            <option value="RPG_ITEM_UNCOMMON">UnCommon</option>
-                            <option value="RPG_ITEM_RARE">Rare</option>
-                            <option value="RPG_ITEM_ULTRARARE">Ultimate</option>
-                            <option value="RPG_ITEM_UNIQUE">Unique</option>
-                            <option value="RPG_ITEM_SOULBOUND">Soul_Bound</option>
-                            <option value="RPG_ITEM_ENCHANTED">Enchanted</option>
-                            <option value="RPG_ITEM_ETHEREAL">Ethereal</option>
-                            <option value="RPG_ITEM_ARTIFACT">Artifact</option>
-                            <option value="RPG_ITEM_QUEST">Quest</option>
-                        </select>
-                    </div>
-                </div>
-
-                <div class="label">
-                    <label>Material:</label>
-                    <span class="left_span"></span>
-                    <div class="label_value">
-                        <select name="material" id="material">
-                        <option value="">None</option>
-                        <option value="weapons/sword_20">sword_20</option>
-                        <option value="weapons/elfblade">elf_blade</option>
-                        <option value="weapons/dragon_01">dragon_01</option>
-                        <option value="weapons/dragon_19">dragon_19</option>
-                        <option value="weapons/cavelarge">cave_large</option>
-                        <option value="bloodarms3">bloodarms_03</option>
-                        <option value="arms1">arms_01</option>
-                    </select>
-                    </div>
-                </div>
-
-                <div class="label">
-                    <label>Race:</label>
-                    <span class="left_span"></span>
-                    <div class="label_value">
-                        <select name="race" id="race">
-                        <option value="">Anyone</option>
-                        <option value="Darkelf">Darkelf</option>
-                        <option value="Dwarf">Dwarf</option>
-                        <option value="Human">Human</option>
-                        <option value="Norront">Norront</option>
-                        <option value="Sandelf">Sandelf</option>
-                        <option value="Skala">Skala</option>
-                        <option value="Woodelf">Woodelf</option>
-                    </select>
-                    </div>
-                </div>
-
-                <div class="label">
-                    <label>Spell Name:</label>
-                    <span class="left_span"></span>
-                    <div class="label_value">
-                        <select name="spell_name" id="spell_name">
-                            <option value="">None</option>
-                            <option value="Tenderize">tenderize</option>
-                        </select>
-                    </div>
-                </div>
-
-                <div class="label">
-                    <label>Spell Trigger:</label>
-                    <span class="left_span"></span>
-                    <div class="label_value">
-                        <select name="spell_trigger" id="spell_trigger">                        
-                            <option value="RPG_ITEM_TRIGGER_MELEE">melee</option>
-                        </select>
-                    </div>
-                </div>
-
-                <div class="label">
-                    <label>Spell Damage:</label>
-                    <span class="left_span"></span>
-                    <div class="label_value">
-                        <input type="number" value=0 name="spell_damage" id="spell_damage">
                     </div>
                 </div>
 
@@ -281,7 +110,7 @@
                     <label>Particle:</label>
                     <span class="left_span"></span>
                     <div class="label_value">
-                        <select name="equiped_particle" id="equiped_particle">                        
+                        <select name="insert_afxEffectEnd" id="insert_afxEffectEnd">                        
                             <option value="">None</option>
                             <option value="DiseaseEmitter">Disease_Emitter</option>
                         </select>
@@ -295,12 +124,6 @@
                 <div>
                     <select name="bitmap_type" id="bitmap_type">
                         <option value="Ammo">Ammo</option>
-                        <option value="Bow">Bow</option>
-                        <option value="Dagger">Dagger</option>
-                        <option value="Sword">Sword</option>
-                        <option value="Axe">Axe</option>
-                        <option value="Mace">Mace</option>
-                        <option value="Shield">Shield</option>
                     </select>
                     
                     <select name="bitmap" id="bitmap"></select>
@@ -349,6 +172,36 @@
             <span class="left_span"></span>
             <div class="label_value">
                 <textarea id="add_stats" cols="40" rows="4" name="add_stats"></textarea>
+            </div>
+        </div>
+
+        <div class="label">
+            <label>Add AFX:</label>
+            <input type="button" value="Insert Afx" id="insertAfxBtn" name="insertAfxBtn" class="insertAfxBtn">
+            <select name="insert_afxCasting" id="insert_afxCasting">                        
+                <option value='"IcSRingCasting"'>IcSRingCasting</option>
+                <option value='"IcSRingImpact"'>IcSRingImpact</option>
+                <option value='"ThorHammerImpact"'>ThorHammerImpact</option>
+                <option value='"Stun"'>Stun</option>
+            </select>
+        </div>
+
+        <div class="label">
+            <select name="insert_afxBegin" id="insert_afxBegin">                        
+                <option value='"IcSRingCasting"'>IcSRingCasting</option>
+                <option value='"IcSRingImpact"'>IcSRingImpact</option>
+                <option value='"ThorHammerImpact"'>ThorHammerImpact</option>
+                <option value='"Stun"'>Stun</option>
+            </select>
+            <select name="insert_afxEnd" id="insert_afxEnd">                        
+                <option value='"IcSRingCasting"'>IcSRingCasting</option>
+                <option value='"IcSRingImpact"'>IcSRingImpact</option>
+                <option value='"ThorHammerImpact"'>ThorHammerImpact</option>
+                <option value='"Stun"'>Stun</option>
+            </select>
+            <span class="left_span"></span>
+            <div class="label_value">
+                <textarea id="add_afx" cols="40" rows="4" name="add_afx"></textarea>
             </div>
         </div>
 
