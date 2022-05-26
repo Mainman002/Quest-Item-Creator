@@ -144,12 +144,42 @@
                     <div class="label_value">
                         <select name="skill" id="skill">
                             <option value="">None</option>
-                            <option value="1H Slash">1H Slash</option>
-                            <option value="2H Slash">2H Slash</option>
                             <option value="1H Impact">1H Impact</option>
                             <option value="2H Impact">2H Impact</option>
-                            <option value="Martial">Martial</option>
+                            <option value="1H Slash">1H Slash</option>
+                            <option value="2H Slash">2H Slash</option>
                             <option value="Shields">Shields</option>
+                            <option value="Fists">Fists</option>
+                            <option value="Claw">Claw</option>
+                            <option value="Martial">Martial</option>
+                            <option value="Dual Wield">Dual Wield</option>
+                            <option value="Power Wield">Power Wield</option>
+                            <option value="1H Cleave">1H Cleave</option>
+                            <option value="2H Cleave">1H Cleave</option>
+                            <option value="1H Pierce">1H Pierce</option>
+                            <option value="2H Pierce">2H Pierce</option>
+                            <option value="Elemental Combat">Elemental Combat</option>
+                            <option value="Wraith">Wraith</option>
+                            <option value="Healing Hands">Healing Hands</option>
+                            <option value="Poison">Poison</option>
+                            <option value="Siphon Strength">Siphon Strength</option>
+                            <option value="Cloth">Cloth</option>
+                            <option value="Cloth Armor">Cloth Armor</option>
+                            <option value="Light Armor">Light Armor</option>
+                            <option value="Leather Armor">Leather Armor</option>
+                            <option value="Chain Armor">Chain Armor</option>
+                            <option value="Plate Armor">Plate Armor</option>
+                            <option value="Heavy Plate Armor">Heavy Plate Armor</option>
+                            <option value="Mining">Mining</option>
+                            <option value="Blacksmithing">Blacksmithing</option>
+                            <option value="Cooking">Cooking</option>
+                            <option value="Brewing">Brewing</option>
+                            <option value="Archery">Archery</option>
+                            <option value="Repair">Repair</option>
+                            <option value="Foraging">Foraging</option>
+                            <option value="Foresting">Foresting</option>
+                            <option value="Fishing">Fishing</option>
+                            <option value="Hunting">Hunting</option>
                         </select>
                     </div>
                 </div>
@@ -159,35 +189,43 @@
                     <span class="left_span"></span>
                     <div class="label_value">
                         <select name="slot_right" id="slot_right">
-                            <option value="RPG_SLOT_PRIMARY">Hand</option>
+                            <option value="RPG_SLOT_PRIMARY">Right Hand</option>
+                            <option value="RPG_SLOT_SECONDARY">Left Hand</option>
                             <option value="RPG_SLOT_SHIELD">Shield</option>
                             <option value="RPG_SLOT_RANGED">Ranged</option>
                             <option value="RPG_SLOT_AMMO">Ammo</option>
                             <option value="RPG_SLOT_HEAD">Head</option>
                             <option value="RPG_SLOT_CHEST">Chest</option>
                             <option value="RPG_SLOT_NECK">Neck</option>
-                            <option value="RPG_SLOT_RFINGER">Finger</option>
-                            <option value="RPG_SLOT_RWRIST">Wrist</option>
-                            <option value="RPG_SLOT_REAR">Ear</option>
+                            <option value="RPG_SLOT_RFINGER">Right Finger</option>
+                            <option value="RPG_SLOT_LFINGER,RPG_SLOT_LFINGER">Left Finger</option>
+                            <option value="RPG_SLOT_RWRIST">Right Wrist</option>
+                            <option value="RPG_SLOT_LWRIST,RPG_SLOT_LWRIST">Left Wrist</option>
+                            <option value="RPG_SLOT_REAR">Right Ear</option>
+                            <option value="RPG_SLOT_LEAR,RPG_SLOT_LEAR">Left Ear</option>                            
                         </select>
                     </div>
                 </div>
-
+                
                 <div class="label">
                     <label>Offhand:</label>
                     <span class="left_span"></span>
                     <div class="label_value">
                         <select name="slot_left" id="slot_left">
-                            <option value="RPG_SLOT_SECONDARY">Hand</option>
+                            <option value="RPG_SLOT_PRIMARY">Right Hand</option>
+                            <option value="RPG_SLOT_SECONDARY">Left Hand</option>
                             <option value="RPG_SLOT_SHIELD">Shield</option>
                             <option value="RPG_SLOT_RANGED">Ranged</option>
                             <option value="RPG_SLOT_AMMO">Ammo</option>
                             <option value="RPG_SLOT_HEAD">Head</option>
                             <option value="RPG_SLOT_CHEST">Chest</option>
                             <option value="RPG_SLOT_NECK">Neck</option>
-                            <option value="RPG_SLOT_LFINGER,RPG_SLOT_LFINGER">Finger</option>
-                            <option value="RPG_SLOT_LWRIST,RPG_SLOT_LWRIST">Wrist</option>
-                            <option value="RPG_SLOT_LEAR,RPG_SLOT_LEAR">Ear</option>                            
+                            <option value="RPG_SLOT_RFINGER">Right Finger</option>
+                            <option value="RPG_SLOT_LFINGER,RPG_SLOT_LFINGER">Left Finger</option>
+                            <option value="RPG_SLOT_RWRIST">Right Wrist</option>
+                            <option value="RPG_SLOT_LWRIST,RPG_SLOT_LWRIST">Left Wrist</option>
+                            <option value="RPG_SLOT_REAR">Right Ear</option>
+                            <option value="RPG_SLOT_LEAR,RPG_SLOT_LEAR">Left Ear</option>                            
                         </select>
                     </div>
                 </div>
@@ -351,6 +389,54 @@
                 <textarea id="add_stats" cols="40" rows="4" name="add_stats"></textarea>
             </div>
         </div>
+
+        <!-- <div class="label">
+            <label>Add Skill:</label>
+            <select name="insert_skill" id="insert_skill">                        
+                <option value="1H Impact">1H Impact</option>
+                    <option value="2H Impact">2H Impact</option>
+                    <option value="1H Slash">1H Slash</option>
+                    <option value="2H Slash">2H Slash</option>
+                    <option value="Shields">Shields</option>
+                    <option value="Fists">Fists</option>
+                    <option value="Claw">Claw</option>
+                    <option value="Martial">Martial</option>
+                    <option value="Dual Wield">Dual Wield</option>
+                    <option value="Power Wield">Power Wield</option>
+                    <option value="1H Cleave">1H Cleave</option>
+                    <option value="2H Cleave">1H Cleave</option>
+                    <option value="1H Pierce">1H Pierce</option>
+                    <option value="2H Pierce">2H Pierce</option>
+                    <option value="Elemental Combat">Elemental Combat</option>
+                    <option value="Wraith">Wraith</option>
+                    <option value="Healing Hands">Healing Hands</option>
+                    <option value="Poison">Poison</option>
+                    <option value="Siphon Strength">Siphon Strength</option>
+                    <option value="Cloth">Cloth</option>
+                    <option value="Cloth Armor">Cloth Armor</option>
+                    <option value="Light Armor">Light Armor</option>
+                    <option value="Leather Armor">Leather Armor</option>
+                    <option value="Chain Armor">Chain Armor</option>
+                    <option value="Plate Armor">Plate Armor</option>
+                    <option value="Heavy Plate Armor">Heavy Plate Armor</option>
+                    <option value="Mining">Mining</option>
+                    <option value="Blacksmithing">Blacksmithing</option>
+                    <option value="Cooking">Cooking</option>
+                    <option value="Brewing">Brewing</option>
+                    <option value="Archery">Archery</option>
+                    <option value="Repair">Repair</option>
+                    <option value="Foraging">Foraging</option>
+                    <option value="Foresting">Foresting</option>
+                    <option value="Fishing">Fishing</option>
+                    <option value="Hunting">Hunting</option>
+            </select>
+            <input type="number" value=0 style="max-width: 60px;" id="stat_amount" name="stat_amount" class="stat_amount">
+            <input type="button" value="Insert Stat" id="insertSkillBtn" name="insertSkillBtn" class="insertSkillBtn">
+            <span class="left_span"></span>
+            <div class="label_value">
+                <textarea id="add_skill" cols="40" rows="4" name="add_skill"></textarea>
+            </div>
+        </div> -->
 
         <div class="label">
             <label>Output:</label>
