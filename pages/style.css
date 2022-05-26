@@ -17,6 +17,7 @@ body {
 
 img {
     visibility: hidden;
+    overflow: hidden;
 }
 
 canvas {
@@ -40,7 +41,7 @@ canvas {
     height: fit-content;
     width: fit-content;
     margin: 0px 0px;
-    padding-top: 30px;
+    padding-top: 40px;
     padding-bottom: 0px;
     overflow: hidden;
 }
@@ -171,6 +172,7 @@ canvas {
     border:none; 
     border-radius:4px; 
     padding:4px;
+    margin: 4px;
     height:fit-content; 
     width: fit-content;
 }
@@ -192,6 +194,7 @@ canvas {
     border:none; 
     border-radius:4px; 
     padding:4px;
+    margin: 4px;
     height:fit-content; 
     width: fit-content;
 }
@@ -213,6 +216,7 @@ canvas {
     border:none; 
     border-radius:4px; 
     padding:4px;
+    margin: 4px;
     height:fit-content; 
     width: fit-content;
 }
@@ -234,13 +238,22 @@ canvas {
     border:none; 
     border-radius:8px; 
     padding:4px;
+    margin: 4px;
     height:fit-content; 
     width: fit-content;
 }
 
 input[type="text"], textarea {
+    border: 1px solid black;
     background-color : #77473b; 
     color: white;
+}
+
+#bitmap, #bitmap_type, #speed, #damage, #range, #armor, #copper, #silver, #tin, #gold, #flag_common, #flag_type, #skill, #slot_right, #slot_left, #destructable, #model, #model_type, #material, #race, #spell_name, #spell_trigger, #spell_damage, #equiped_particle, #insert_stat, #stat_amount {
+    border: 1px solid black;
+    background-color : #77473b; 
+    color: white;
+    margin: 4px;
 }
 
 .label_value {

@@ -46,7 +46,7 @@
                     <label>Name:</label>
                     <span class="left_span"></span>
                     <div class="label_value">
-                        <input value="Empty" type="text" name="item_name" id="item_name">
+                        <input value="Empty" type="text" name="item_name" id="item_name" class="item_name">
                     </div>
                 </div>
 
@@ -155,13 +155,39 @@
                 </div>
                 
                 <div class="label">
-                    <label>Slot:</label>
+                    <label>Primary:</label>
                     <span class="left_span"></span>
                     <div class="label_value">
-                        <select name="slot" id="slot">
-                            <option value="RPG_SLOT_PRIMARY,RPG_SLOT_SECONDARY">Either</option>
-                            <option value="RPG_SLOT_PRIMARY,RPG_SLOT_PRIMARY">Right Hand</option>
-                            <option value="RPG_SLOT_SECONDARY,RPG_SLOT_SECONDARY">Left Hand</option>
+                        <select name="slot_right" id="slot_right">
+                            <option value="RPG_SLOT_PRIMARY">Hand</option>
+                            <option value="RPG_SLOT_SHIELD">Shield</option>
+                            <option value="RPG_SLOT_RANGED">Ranged</option>
+                            <option value="RPG_SLOT_AMMO">Ammo</option>
+                            <option value="RPG_SLOT_HEAD">Head</option>
+                            <option value="RPG_SLOT_CHEST">Chest</option>
+                            <option value="RPG_SLOT_NECK">Neck</option>
+                            <option value="RPG_SLOT_RFINGER">Finger</option>
+                            <option value="RPG_SLOT_RWRIST">Wrist</option>
+                            <option value="RPG_SLOT_REAR">Ear</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="label">
+                    <label>Offhand:</label>
+                    <span class="left_span"></span>
+                    <div class="label_value">
+                        <select name="slot_left" id="slot_left">
+                            <option value="RPG_SLOT_SECONDARY">Hand</option>
+                            <option value="RPG_SLOT_SHIELD">Shield</option>
+                            <option value="RPG_SLOT_RANGED">Ranged</option>
+                            <option value="RPG_SLOT_AMMO">Ammo</option>
+                            <option value="RPG_SLOT_HEAD">Head</option>
+                            <option value="RPG_SLOT_CHEST">Chest</option>
+                            <option value="RPG_SLOT_NECK">Neck</option>
+                            <option value="RPG_SLOT_LFINGER,RPG_SLOT_LFINGER">Finger</option>
+                            <option value="RPG_SLOT_LWRIST,RPG_SLOT_LWRIST">Wrist</option>
+                            <option value="RPG_SLOT_LEAR,RPG_SLOT_LEAR">Ear</option>                            
                         </select>
                     </div>
                 </div>
@@ -186,47 +212,6 @@
                             <option value="RPG_ITEM_QUEST">Quest</option>
                         </select>
                     </div>
-                </div>
-                
-                <div class="label">
-                    <label>Model:</label>
-                    <span class="left_span"></span>
-                    <div class="label_value">
-                        <select name="model" id="model">
-                            <!-- Daggers -->
-                            <option value="weapons/dagger00.dts">dagger_00</option>
-                            <option value="weapons/icicle.dts">icicle</option>
-                            <!-- Swords -->
-                            <option value="weapons/dragonswordice.dts">dragon_sword_ice</option>
-                            <option value="weapons/dragonsword.dts">dragon_sword</option>
-                            <option value="weapons/sword01.dts">sword_01</option>
-                            <option value="weapons/broadsword.dts">broad_sword</option>
-                            <option value="weapons/evileyelongsword.dts">evil_eye_long_sword</option>
-                            <option value="weapons/spikedsword2.dts">spiked_sword_02</option>
-                            <option value="weapons/lavabroad.dts">lava_broad</option>
-                            <!-- Axes -->
-                            <option value="weapons/shortaxe1.dts">short_axe_01</option>
-                            <option value="weapons/elvenaxesingle.dts">elven_axe_single</option>
-                            <option value="weapons/bovaxe.dts">bov_axe_01</option>
-                            <option value="weapons/bovaxe2.dts">bov_axe_02</option>
-                            <option value="weapons/axe05.dts">axe_05</option>
-                            <option value="weapons/spikeaxe.dts">spike_axe</option>
-                            <!-- Maces -->
-                            <option value="weapons/macebladed.dts">emerald_mace_bladed</option>
-                            <!-- Hammers -->
-                            <option value="weapons/rockhammer.dts">rock_hammer</option>
-                            <!-- Staffs -->
-                            <option value="weapons/dragonstaff.dts">dragon_staff</option>
-                            <option value="weapons/ldualblade.dts">left_dual_blade</option>
-                            <!-- Claws -->
-                            <option value="weapons/claw.dts">claw</option>
-                            <!-- Bows -->
-                            <option value="weapons/bow04.dts">bow_04</option>
-                            <!-- Shields -->
-                            <option value="weapons/basicwoodbuckler.dts">Basic_Wood_Buckler</option>                            
-                            <option value="weapons/basicwoodnsteelbuckler.dts">Basic_Wood_N_Steel_Buckler</option>                            
-                        </select>
-                    </div>    
                 </div>
 
                 <div class="label">
@@ -302,13 +287,6 @@
                         </select>
                     </div>
                 </div>
-
-                <div class="label">
-                    <!-- <span class="left_span"></span> -->
-                    <div class="label_value">
-                        <input type="button" value="Copy Values" name="copyBtn" id="copyBtn">
-                    </div>
-                </div>
                 
             </div>
         </div>
@@ -318,60 +296,42 @@
                     <select name="bitmap_type" id="bitmap_type">
                         <option value="Ammo">Ammo</option>
                         <option value="Bow">Bow</option>
+                        <option value="Dagger">Dagger</option>
                         <option value="Sword">Sword</option>
                         <option value="Axe">Axe</option>
                         <option value="Mace">Mace</option>
                         <option value="Shield">Shield</option>
                     </select>
-                </div>
-
-                <div>
-                    <select name="bitmap" id="bitmap">
-                    <!-- <option value="">None</option> -->
-                    <!-- Swords -->
-                    <!-- <option value="EQUIPMENT/SWORDS/1">Sword_01</option> -->
-                    <!-- <option value="EQUIPMENT/SWORDS/24">Sword_24</option> -->
-                    <!-- <option value="EQUIPMENT/SWORDS/25">Sword_25</option> -->
-                    <!-- Axes -->
-                    <!-- <option value="EQUIPMENT/AXES/ELVEN/SINGLE/1">Elven_Axe_01</option> -->
-                    <!-- Shield Swords -->
-                    <!-- <option value="EQUIPMENT/SWORDS/SHIELDBLADEH">Shield_Blade_H</option> -->
-                    <!-- <option value="EQUIPMENT/SWORDS/SHIELDBLADELH">Shield_Blade_LH</option> -->
-                    <!-- <option value="EQUIPMENT/SWORDS/SHIELDBLADELV">Shield_Blade_LV</option> -->
-                    <!-- <option value="EQUIPMENT/SWORDS/SHIELDBLADERH">Shield_Blade_RH</option> -->
-                    <!-- <option value="EQUIPMENT/SWORDS/SHIELDBLADERV">Shield_Blade_RV</option> -->
-                    <!-- <option value="EQUIPMENT/SWORDS/SHIELDBLADEV">Shield_Blade_V</option> -->
-                    <!-- <option value="EQUIPMENT/SWORDS/SHIELDLESSBLADE">Shieldless_Blade</option> -->
-                    <!-- <option value="EQUIPMENT/SWORDS/SHIELDLESSDOUBLEBLADE">Shieldless_Double_Blade</option> -->
-                    <!-- Emerald Maces -->
-                    <!-- <option value="EQUIPMENT/MACE/EMERALD/1">Emerald_01</option> -->
-                    <!-- <option value="EQUIPMENT/MACE/EMERALD/2">Emerald_02</option> -->
-                    <!-- <option value="EQUIPMENT/MACE/EMERALD/3">Emerald_03</option> -->
-                    <!-- <option value="EQUIPMENT/MACE/EMERALD/4">Emerald_04</option> -->
-                    <!-- <option value="EQUIPMENT/MACE/EMERALD/5">Emerald_05</option> -->
-                    <!-- Bows -->
-                    <!-- <option value="EQUIPMENT/BOWS/3">Bow_03</option> -->
-                    <!-- Shields -->
-                    <!-- <option value="EQUIPMENT/SHIELDS/4">Shield_04</option> -->
-                    <!-- <option value="EQUIPMENT/SHIELDS/BASICWOODBUCKLER">Basic_Wood_Buckler</option> -->
-                    <!-- <option value="EQUIPMENT/SHIELDS/BASICSTEELBUCKLER">Basic_Steel_Buckler</option> -->
-                    <!-- <option value="EQUIPMENT/SHIELDS/BASICWOODNSTEELBUCKLER">Basic_Wood_N_Steel_Buckler</option> -->
-                    <!-- <option value="EQUIPMENT/SHIELDS/EPICWOODNSTEELBUCKLER">Epic_Wood_N_Steel_Buckler</option> -->
-                    <!-- <option value="EQUIPMENT/SHIELDS/STEELSHIELD">Steel_Shield</option> -->
-                    </select>
+                    
+                    <select name="bitmap" id="bitmap"></select>
                 </div>
             </div>
-            
             <canvas id="canvas" width="256" height="256"></canvas>
 
-        </div>
+            <!-- <div class="align_left">
+                <div>
+                    <select name="model_type" id="model_type">
+                        <option value="Ammo">Ammo</option>
+                        <option value="Bow">Bow</option>
+                        <option value="Sword">Sword</option>
+                        <option value="Axe">Axe</option>
+                        <option value="Mace">Mace</option>
+                        <option value="Shield">Shield</option>
+                    </select>
+                    
+                    <select name="model" id="model"></select>
+                </div>
+            </div>
+            <canvas id="canvas_model" width="256" height="256"></canvas>
+        </div> -->
+    </div>
 
     <div>
         <div class="label">
             <label>Description:</label>
             <span class="left_span"></span>
             <div class="label_value">
-                <textarea id="desc" cols="40" rows="16" name="desc"></textarea>
+                <textarea class="desc" id="desc" cols="40" rows="16" name="desc"></textarea>
             </div>
         </div>
 
@@ -394,6 +354,7 @@
 
         <div class="label">
             <label>Output:</label>
+            <input type="button" value="Copy Values" name="copyBtn" id="copyBtn">
             <span class="left_span"></span>
             <div class="label_value">
                 <textarea id="item_result" cols="40" rows="16" name="output"></textarea>
