@@ -132,6 +132,11 @@ addEventListener('load', (e) => {
         set_values();
     });
 
+    insert_afxCasting.addEventListener("click", function() {
+        add_stats.value = add_stats.value + `(${insert_stat.value},${stat_amount.value}),`;
+        set_values();
+    });
+
     copyBtn.addEventListener("click", function() {
         set_values();
         return_values();

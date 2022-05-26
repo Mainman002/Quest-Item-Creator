@@ -214,12 +214,12 @@ input[type="text"], textarea {
 }
 
 /* Effect Page */
-/* #leech_tick,#leech_tick_rate,#drain_tick,#drain_tick_rate,#leech_type,#drain_type,#resist,#target,#add_effect,#effect_amount,#insert_effect,#insertStatBtn {
+#leech_tick,#leech_tick_rate,#drain_tick,#drain_tick_rate,#leech_type,#drain_type,#resist,#target,#add_effect,#effect_amount,#insert_effect,#insertStatBtn {
     border: 1px solid black;
     background-color : #77473b; 
     color: white;
     margin: 4px;
-} */
+}
 
 /* Spell Page */
 #insertAfxBtn,#insert_afxCasting,#insert_afxBegin,#insert_afxEnd,#duration,#castTime,#recastTime,#castRange,#insert_afxEffectBegin,#insert_afxEffectEnd {
